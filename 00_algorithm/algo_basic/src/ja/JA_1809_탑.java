@@ -17,6 +17,7 @@ public class JA_1809_탑 {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
+		StringBuilder sb = new StringBuilder();
 		int N = Integer.parseInt(br.readLine());
 		top = new int[N];
 		result = new int[N];
@@ -26,9 +27,12 @@ public class JA_1809_탑 {
 		}
 		razer();
 		for (int i = 0; i < result.length; i++) {
-			System.out.print(result[i] + " ");
+			//System.out.print(result[i] + " ");
+			sb.append(result[i]).append(" ");
 		}
-		System.out.println();
+		//System.out.println();
+		sb.append("\n");
+		System.out.println(sb);
 	}
 	
 	public static void razer() {

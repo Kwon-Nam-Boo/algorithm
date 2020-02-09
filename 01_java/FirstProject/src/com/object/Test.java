@@ -36,12 +36,12 @@ public class Test {
 		Test t = new Test();
 		
 		// 객체 t 사용
-		t.go();
+		/*t.go();
 		System.out.println(t.num);
 		System.out.println(t.name);
 		System.out.println(t.flag);
 		System.out.println(t.d);
-		t.stop();
+		t.stop();*/
 	}
 
 }

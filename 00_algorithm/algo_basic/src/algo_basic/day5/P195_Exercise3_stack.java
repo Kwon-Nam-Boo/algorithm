@@ -40,7 +40,7 @@ public class P195_Exercise3_stack {
 		while(!stack.isEmpty()) {
 			// 가장 마지막에 있는걸 하나 빼본다
 			Integer top = stack.pop();
-			System.out.println(top);
+			
 			// 방문 했던 지점은 넘긴다
 			if(visited[top]) {
 				continue;
@@ -80,8 +80,8 @@ public class P195_Exercise3_stack {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		makeGraph();
-		//DFS(1);
-		DFS_2(1);
+		DFS(1);
+		//DFS_2(1);
 		System.out.println(path1);
 	}
 	
