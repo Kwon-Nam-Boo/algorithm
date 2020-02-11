@@ -12,7 +12,7 @@ public class BOJ_7569_토마토 {
 
 	private static int[][][] tomato;
 	private static int N,M,H;
-	//private static boolean[][][] visited;
+	private static boolean[][][] visited;
 	private static int[][] dir = {{0,-1,0},{0,1,0},{0,0,-1},{0,0,1},{-1,0,0},{1,0,0}};
 	private static Queue<Pair> ripe = new LinkedList<>();
 	
@@ -22,12 +22,12 @@ public class BOJ_7569_토마토 {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		StringBuilder sb = new StringBuilder();
 		
-		N = Integer.parseInt(st.nextToken());
-		M = Integer.parseInt(st.nextToken());
-		H = Integer.parseInt(st.nextToken());
+		N = Integer.parseInt(st.nextToken());		//열
+		M = Integer.parseInt(st.nextToken());		//행
+		H = Integer.parseInt(st.nextToken());		//높이
 		
 		tomato = new int[H][M][N];
-		//visited = new boolean[H][M][N];
+		visited = new boolean[H][M][N];
 		
 		for (int h = 0; h < H; h++) {			
 			for (int r = 0; r < M; r++) {		
@@ -36,14 +36,15 @@ public class BOJ_7569_토마토 {
 					tomato[h][r][c] = Integer.parseInt(st.nextToken());
 					if(tomato[h][r][c]==1) {
 						ripe.add(new Pair(h,r,c));
+						visited[h][r][c]=true;
 					}
 				}
 			}
 		}
 		
-		for (int i = 0; i < H; i++) {
+	/*	for (int i = 0; i < H; i++) {
 			System.out.println(Arrays.deepToString(tomato[i]));
-		}
+		}*/
 		
 		int count=0;
 		while(true) {
@@ -53,11 +54,15 @@ public class BOJ_7569_토마토 {
 			}
 			count++;
 		}
-		
-		System.out.println(count);
-		for (int i = 0; i < H; i++) {
-			System.out.println(Arrays.deepToString(tomato[i]));
+		if(check()) {
+			System.out.println(count);
+		}else {
+			System.out.println("-1");
 		}
+		
+		/*for (int i = 0; i < H; i++) {
+			System.out.println(Arrays.deepToString(tomato[i]));
+		}*/
 		
 		
 	}
@@ -83,9 +88,10 @@ public class BOJ_7569_토마토 {
 				int nh = tmp.h + dir[j][0];
 				int nc = tmp.c + dir[j][1];
 				int nr = tmp.r + dir[j][2];
-				if(isIn(nh,nc,nr) && tomato[nh][nc][nr]==0){
+				if(isIn(nh,nc,nr) && tomato[nh][nc][nr]==0 && !visited[nh][nc][nr]){
 					tomato[nh][nc][nr] = 1;
 					ripe.add(new Pair(nh,nc,nr));
+					visited[nh][nc][nr] =true;
 				}
 			}
 		}
@@ -97,6 +103,17 @@ public class BOJ_7569_토마토 {
 		return r >=0 && c >=0 && h>=0 && r < N && c < M &&  h < H ;
 	}
 	
-	//public
+	public static boolean check() {
+		for (int i = 0; i < H; i++) {
+			for (int j = 0; j < M; j++) {
+				for (int k = 0; k < N; k++) {
+					if(tomato[i][j][k]==0) {
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
 
 }
