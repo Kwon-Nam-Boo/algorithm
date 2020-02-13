@@ -49,7 +49,7 @@ public class BOJ_15650_N과M2 {
 		if(d==0) {
 			return true;
 		}
-		if(result[d-1] < result[d]) {
+		if(result[d-1] < result[d]) {				//
 			return true;
 		}
 		return false;
