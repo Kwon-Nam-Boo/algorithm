@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class SWEA_4408_자기방으로_D4_돌아가기 {
+public class SWEA_4408_D4_자기방으로_돌아가기 {
 	
 	private static int[] result;
 	

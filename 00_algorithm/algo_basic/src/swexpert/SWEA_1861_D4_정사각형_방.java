@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class SWEA_1861_정사각형_방 {
+public class SWEA_1861_D4_정사각형_방 {
 
 	private static int N;
 	private static int count;

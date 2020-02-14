@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class SWEA_1873_상호의_D3_배틀필드 {
+public class SWEA_1873_D3_상호의_배틀필드 {
 	
 	private static String[][] field;
 	private static String[] moves;
