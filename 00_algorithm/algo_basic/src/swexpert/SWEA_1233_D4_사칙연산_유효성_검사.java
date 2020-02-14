@@ -22,15 +22,28 @@ public class SWEA_1233_D4_사칙연산_유효성_검사 {
 			int N = Integer.parseInt(br.readLine());
 			tree = new Node[N+1];
 			
+			int result =1;
 			for (int j = 1; j <= N; j++) {
 				int child1= 0;
 				int child2 =0;
 				st = new StringTokenizer(br.readLine());
 				
 				int parent = Integer.parseInt(st.nextToken());
+				
 				String word = st.nextToken();
 				
-				if(st.hasMoreTokens()) {
+				if(operator.indexOf(word)>=0 && !st.hasMoreTokens()) {	// 더이상 st가 없고 word가연산자일때
+					result =0;
+				}
+				if(operator.indexOf(word)<0 && !st.hasMoreTokens()) { //더이상 st가 없고 숫자일떄
+					child1 = Integer.parseInt(word);
+				}
+				
+				if(operator.indexOf(word)<0 && st.hasMoreTokens()) { //st가 남아있는데 word가 숫자일때
+					result =0;
+				}
+				
+				if(st.hasMoreTokens()) {			
 					child1 = Integer.parseInt(st.nextToken());
 				}
 				if(st.hasMoreTokens()) {
@@ -40,20 +53,20 @@ public class SWEA_1233_D4_사칙연산_유효성_검사 {
 				Node pNode =getNode(parent);
 				pNode.w = word;
 				
-				if(child2!=0) {
+				if(child2!=0) {											// 둘다 있는 경우
 					Node cNode1 =getNode(child1);
 					Node cNode2 =getNode(child2);
 					pNode.l =cNode1;
 					pNode.r = cNode2;
-				}else if(child1!=0 && child2==0) {
+				}else if(child1!=0 && child2==0) {						// 하나만 있으면 왼쪽
 					Node cNode1 =getNode(child1);
 					pNode.l = cNode1;
 				}
 			}
-			//inOrder(tree[1]);
-			sb.append("\n");
-		}
 
+			sb.append(result).append("\n");
+		}
+		System.out.println(sb);
 	}
 	
 	static class Node{

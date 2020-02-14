@@ -55,7 +55,7 @@ public class P410_Exercise1_pre {
 			}
 			
 		}
-		System.out.println(Arrays.toString(tree));
+		System.out.println(tree[1]);
 	}
 	
 	private static Node getNode(int v) {
