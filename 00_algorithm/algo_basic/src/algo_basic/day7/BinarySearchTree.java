@@ -122,7 +122,8 @@ public class BinarySearchTree {
 			System.out.printf("삽입 연산:%d %b%n", nums[i], addNode(nums[i]));
 		}
 		System.out.printf("%d노드: %s%n",15,search(15));
-		System.out.printf("%d노드: %s%n",9,search(9));
+		System.out.printf("%d노드: %s%n",12,search(12));
+		//System.out.printf("%d노드: %s%n",8,search(8));
 		System.out.printf("%d노드 삭제 %b: %s%n",13,deleteNode(13),search(15));
 	}
 }
