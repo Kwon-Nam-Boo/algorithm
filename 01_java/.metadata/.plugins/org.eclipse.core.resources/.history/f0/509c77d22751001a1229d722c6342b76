@@ -1,0 +1,23 @@
+package com.computer;
+
+public class MyComputer {
+	// 마우스, 모니터, 메인프레임, 키보드가 모이면 하나의 컴퓨터가 된다.
+	
+	//field(data)
+	private Mouse mouse;
+	private MainFrame frame;
+	private KeyBoard keyboard;
+	private Monitor monitor;
+	
+	public MyComputer() {
+		mouse = new Mouse("logitec", 55000, true);
+		frame = new MainFrame(maker, price, cpu);
+		keyboard = new KeyBoard("Deck", 100000, "");
+		monitor = new Monitor("samsung", 70000,24)
+	}
+	
+	public void powerOn(){}
+	public void powerOff(){}
+	public void doJob(){}
+	public void info(){}
+}

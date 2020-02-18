@@ -1,0 +1,27 @@
+package com.ssafy;
+
+public class CarMgr extends Car {
+	
+	private Car[] cars;
+	private int index;
+	
+	public void add() {
+		
+	}
+	public Car[] search(){
+		
+	}
+	public Car serach(String num) {
+		
+	}
+	public Car[] serach(int price) {
+		
+	}
+	public void update(String num, int price) {
+		
+	}
+	public void delete(String num) {
+		
+	}
+
+}

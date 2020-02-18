@@ -1,0 +1,35 @@
+package com.object;
+
+
+class x{
+	void go() {
+		System.out.println("x go!");
+	}
+	void play() {
+		System.out.println("x play!");
+	}
+	
+}
+class y extends x{
+	void go() {
+		System.out.println("y go!");
+	}
+	
+}
+class z extends y{
+	void go() {
+		System.out.println("z go!");
+	}
+	void play() {
+		System.out.println("z play!");
+	}
+	void sleep() {
+		System.out.println("z sleep!");
+	}
+	
+}
+
+
+public class Test1 {
+
+}

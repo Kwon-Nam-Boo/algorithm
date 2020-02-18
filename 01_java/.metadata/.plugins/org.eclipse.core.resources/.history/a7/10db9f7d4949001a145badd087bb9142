@@ -1,0 +1,11 @@
+package com.object;
+
+class Bus{}
+
+public class ToStringTest {
+	public static void main(String[] args) {
+		Bus b = new Bus();
+		System.out.println(b);
+		System.out.println(b.toString());
+	}
+}

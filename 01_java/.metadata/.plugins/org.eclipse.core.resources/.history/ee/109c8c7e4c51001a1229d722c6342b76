@@ -1,0 +1,45 @@
+package com.collection;
+
+import java.util.ArrayList;
+
+class Member{
+	String num, name;
+
+	public Member(String num, String name) {
+		this.num = num;
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Member [num=" + num + ", name=" + name + "]";
+	}
+		
+}
+
+public class ArrayListCopyTest {
+
+	public static void main(String[] args) {
+		ArrayList<String> src = new ArrayList<>();
+		ArrayList<String> dest = new ArrayList<>();
+		
+		src.add("a");
+		src.add("b");
+		src.add("c");
+		
+		// 얕은 복사
+		//dest =src;
+		// 깊은 복사
+		dest.addAll(src);
+		src.add("d");
+		
+		for (String s : src) {
+			System.out.println(s);
+		}
+		System.out.println("--------------------- ");
+		for (String s : dest) {
+			System.out.println(s);
+		}
+	}
+
+}

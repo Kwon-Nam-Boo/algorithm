@@ -1,0 +1,12 @@
+package com.ssafy.book;
+
+public class BookTest {
+
+	public static void main(String[] args) {
+		BookMgrImpl bmgr = new BookMgrImpl();
+		bmgr.add(new Book("12", "삼국지", "나관중", "은행나무", 20000));
+		bmgr.add(new Magazine("13", "타임즈", "뉴욕", "설즈버그", 15000, 2020, 2));
+		bmgr.add(new Novel("14", "모모", "미하일 엔더", "청림", 13000, "아동"));
+	}
+
+}

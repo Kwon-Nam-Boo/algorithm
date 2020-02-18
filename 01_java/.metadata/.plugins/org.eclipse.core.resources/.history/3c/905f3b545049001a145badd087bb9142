@@ -1,0 +1,25 @@
+package com.object;
+
+public class StaticTest {
+	
+	static int scount;
+	int count;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println(scount);
+		System.out.println(count);
+		/*StaticTest s1 = new StaticTest();
+		StaticTest s2 = new StaticTest();
+		StaticTest s3 = new StaticTest();
+		
+		// count 객체가 각각 1개씩 3개 생성
+		System.out.println(++s1.count + "--" + ++s2.count + "--" + ++s3.count);
+		// scount 객체는 class-area에  1개만 만들어지므로 공유함
+		// 한곳에서 컨트롤 해야하는 경우에도 쓰임
+		System.out.println(++s1.scount + "--" + ++s2.scount + "--" + ++s3.scount);*/
+
+	}
+
+}

@@ -1,0 +1,59 @@
+package com.computer;
+
+public class Mouse extends Parts{
+	private String maker;
+	boolean wireless;
+	
+	public Mouse(){}
+
+	public Mouse(String maker, boolean wireless) {
+		super();
+		this.maker = maker;
+		this.wireless = wireless;
+	}
+
+	public void leftClick(){
+		System.out.println("Mouse_LeftClick");
+		
+	}
+	public void rightClick(){
+		System.out.println("Mouse_RightClick");
+		
+	}
+	public void wheeling(){
+		System.out.println("Mouse_wheeling");
+		
+	}
+
+	public void info() {
+		System.out.println("maker: " + maker);
+		System.out.println("wireless: " + wireless);
+		System.out.println("------------------------");		
+	}
+
+	public String getMaker() {
+		return maker;
+	}
+
+	public void setMaker(String maker) {
+		this.maker = maker;
+	}
+
+	public boolean isWireless() {
+		return wireless;
+	}
+
+	public void setWireless(boolean wireless) {
+		this.wireless = wireless;
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+

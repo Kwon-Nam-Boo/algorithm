@@ -1,0 +1,35 @@
+package com.ssafy;
+
+
+
+public class Movie {
+	
+	private String title;
+	private String director;
+	private int grade;
+	private String genre;
+	private String summary;
+	
+	private Movie() {
+		this(null,null,0,null,null);
+	}
+	
+	private Movie(String title, String director, int grade, String genre, String summary) {
+		this.title = title;
+		this.director = director;
+		this.grade = grade;
+		this.genre = genre;
+		this.summary = summary;
+	}
+	
+	private static Movie instance;
+	
+	public static Movie getinstance() {
+		if(instance == null) {
+			instance = new Movie();
+		}
+		return instance;
+	}
+	
+
+}

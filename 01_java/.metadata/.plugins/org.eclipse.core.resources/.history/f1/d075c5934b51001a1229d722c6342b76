@@ -1,0 +1,14 @@
+package com.collection;
+
+class Member{
+	String num, name;
+}
+
+public class ArrayListCopyTest {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

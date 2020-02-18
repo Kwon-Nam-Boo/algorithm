@@ -44,7 +44,6 @@ public class BOJ_1697_숨바꼭질 {
 		}
 	}
 	
-	
 	public static int jump(int i,int num) {
 		switch(i) {
 			case 0:

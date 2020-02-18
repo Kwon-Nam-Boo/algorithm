@@ -1,0 +1,10 @@
+package com.io;
+
+class Card{
+	private int num;
+	private String name
+}
+
+public class CardSave {
+
+}

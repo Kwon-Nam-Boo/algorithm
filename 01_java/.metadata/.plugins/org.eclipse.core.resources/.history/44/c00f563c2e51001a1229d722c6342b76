@@ -1,0 +1,18 @@
+package com.inter;
+
+public class IRect implements IShape {
+	int width;
+	int height;
+	@Override
+	public double getArea() {
+		
+		return 0;
+	}
+
+	@Override
+	public double getCircum() {
+		
+		return 0;
+	}
+
+}

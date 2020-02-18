@@ -1,0 +1,6 @@
+package com.collection;
+
+public class MyClass {
+	int num;
+	
+}

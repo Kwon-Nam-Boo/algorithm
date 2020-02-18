@@ -1,0 +1,19 @@
+package com.object;
+
+class Bus{
+
+	@Override
+	public String toString() {
+		return "Bus 클래스 생성";
+	}
+	
+	
+}
+
+public class ToStringTest {
+	public static void main(String[] args) {
+		Bus b = new Bus();
+		System.out.println(b);
+		System.out.println(b.toString());
+	}
+}

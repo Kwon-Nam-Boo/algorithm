@@ -1,0 +1,14 @@
+package com.ssafy.products;
+
+
+public class ProductMgr {
+	int N =5;
+	int index;
+	private static Product[] pro;
+
+	ProductMgr(){
+		pro = new Product[N-1];
+	}
+	
+
+}

@@ -3,12 +3,19 @@ package com.object;
 public class BounsTest {
 	
 	void printBonus(Employee who) {
+		if(who instanceof Manager) {			// 부모를 먼저 쓰는것이 좋다.
+			
+		}
+		else if(who instanceof Employee) {
+			
+		}
+		
 		System.out.println(who.getBonus());
 	}
-	void printBonus(Manager who) {
+	/*void printBonus(Manager who) {
 		System.out.println(who.getBonus());
 		System.out.println("check");
-	}
+	}*/
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

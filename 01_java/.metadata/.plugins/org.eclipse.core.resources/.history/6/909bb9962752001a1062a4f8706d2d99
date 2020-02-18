@@ -1,0 +1,17 @@
+package com.ssafy.book;
+
+import java.util.ArrayList;
+
+public class BookTest {
+
+	public static void main(String[] args) throws Exception {
+		BookMgrImpl bmgr = new BookMgrImpl();
+		bmgr.add(new Book("12", "삼국지",20000 , 3));
+		bmgr.add(new Magazine("12", "타임즈",15000 ,3,12));
+		bmgr.add(new Novel("14", "삼국지",20000 , 3));
+		
+	
+	}
+	
+
+}

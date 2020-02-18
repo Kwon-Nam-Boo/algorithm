@@ -1,0 +1,14 @@
+package com.exception;
+
+public class ExceptionTest {
+	public static void main(String[] args) {
+		int result = 0;
+		int a =13, b=0;
+		
+		try {
+			result = a/b;
+		}catch(ArithmeticException e) {
+			System.out.println("9999");
+		}
+	}
+}

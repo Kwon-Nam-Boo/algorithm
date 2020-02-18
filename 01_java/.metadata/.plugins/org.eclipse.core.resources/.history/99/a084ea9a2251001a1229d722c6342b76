@@ -1,0 +1,39 @@
+package com.computer;
+
+public class MainFrame {
+	private String maker;
+	private String cpu;
+	
+	public MainFrame() {}
+	
+	public MainFrame(String maker, String cpu) {
+		super();
+		this.maker = maker;
+		this.cpu = cpu;
+	}
+	
+	public void powerOn(){
+		System.out.println("MainFrame_PowerOn");
+		
+	}
+	public void powerOff(){
+		System.out.println("MainFrame_PowerOff");
+		
+	}
+	
+	
+	public void info() {		
+				
+		System.out.println("------------------------");
+		
+	}
+	
+}
+
+
+
+
+
+
+
+

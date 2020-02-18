@@ -1,0 +1,14 @@
+package com.ssafy;
+
+public class Bus extends Car {
+
+	public Bus() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Bus(String num, String model, int price) {
+		super(num, model, price);
+		// TODO Auto-generated constructor stub
+	}
+
+}

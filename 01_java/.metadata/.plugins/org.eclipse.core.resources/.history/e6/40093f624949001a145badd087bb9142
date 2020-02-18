@@ -1,0 +1,50 @@
+package com.object;
+
+class X{
+	void go() {
+		System.out.println("x go!");
+	}
+	void play() {
+		System.out.println("x play!");
+	}
+	void run() {
+		System.out.println("x run!");
+	}
+	
+}
+class Y extends X{
+	void go() {
+		System.out.println("y go!");
+	}
+	void play() {
+		System.out.println("y play!");
+	}
+	
+}
+class Z extends Y{
+	void go() {
+		System.out.println("z go!");
+	}
+	/*void play() {
+		System.out.println("z play!");
+	}*/
+	void sleep() {
+		System.out.println("z sleep!");
+	}
+	
+}
+
+public class Test1 {
+	public static void main(String[] args) {
+		X x = new Z();
+		Y y = new Z();
+		Z z = new Z();
+		
+		x.go();			//  Z의 go 출력 
+		x.run();		//  X의 run 출력
+		
+		y.go();			//  Z의 go 출력 
+		y.play();		//  Z의 go 출력 
+					
+	}	
+}

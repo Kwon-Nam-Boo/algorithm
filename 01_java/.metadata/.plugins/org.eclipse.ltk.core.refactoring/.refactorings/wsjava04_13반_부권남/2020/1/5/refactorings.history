@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.ssafy.algo.Solution32&apos; to &apos;Solution32_13반_부권남&apos;&#x0D;&#x0A;- Original project: &apos;wsjava04_13반_부권남&apos;&#x0D;&#x0A;- Original element: &apos;com.ssafy.algo.Solution32&apos;&#x0D;&#x0A;- Renamed element: &apos;com.ssafy.algo.Solution32_13반_부권남&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Solution32&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.ssafy.algo{Solution32.java[Solution32" matchStrategy="1" name="Solution32_13반_부권남" qualified="false" references="true" similarDeclarations="false" stamp="1580268102644" textual="false" version="1.0"/>
+</session>

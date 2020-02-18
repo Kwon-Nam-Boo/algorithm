@@ -1,0 +1,26 @@
+package com.ssafy.book;
+
+public class Magazine extends Book {
+	private int month;
+
+	public Magazine(String isbn, String title, String author, String publisher, int price,int month) {
+		super(isbn, title, author, publisher, price);
+		this.month = month;
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "year=" + year + ", month=" + month;
+	}
+	
+	
+}

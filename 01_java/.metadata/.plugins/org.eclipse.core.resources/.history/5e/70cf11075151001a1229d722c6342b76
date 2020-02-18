@@ -1,0 +1,11 @@
+package com.collection;
+
+import java.util.HashSet;
+
+// hashset: Set 타입 클래스 -> 데이터 중복 x, 데이터간 순서 x
+public class HashSetTest {
+	public static void main(String[] args) {
+		HashSet<String> set = new HashSet<>();
+		
+	}
+}

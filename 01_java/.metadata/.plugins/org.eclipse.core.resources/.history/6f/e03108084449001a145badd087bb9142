@@ -1,0 +1,23 @@
+package com.object;
+
+public class Green {
+
+}
+
+class Child extends Parent1{
+	
+}
+
+class Parent1{
+	int a;
+	
+	/*Parent1() {
+		System.out.println("a");
+	}
+
+	Parent1(int a) {
+		System.out.println("b");
+	}
+	*/
+	
+}

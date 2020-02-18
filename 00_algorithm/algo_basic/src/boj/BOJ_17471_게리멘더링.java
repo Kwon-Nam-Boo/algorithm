@@ -81,6 +81,15 @@ public class BOJ_17471_게리멘더링 {
 		}
 		
 		if(check(sub.get(0), sub) && check(sub2.get(0), sub2)) {	// 각각의 선거구가 가능하게 나눠진 케이스라면
+			/*for (int j = 0; j < sub.size(); j++) {
+				System.out.print(sub.get(j) + " ");
+			}
+			System.out.println();
+			for (int j = 0; j < sub2.size(); j++) {
+				System.out.print(sub2.get(j) + " ");
+			}
+			System.out.println();*/
+			
 			flag =true;
 			int sum =0;												// 인구수를 따져서 계산해본다.
 			for (int j = 0; j < sub.size(); j++) {
@@ -91,6 +100,8 @@ public class BOJ_17471_게리멘더링 {
 				sum2+=people[sub2.get(j)];
 			}
 			min = Math.min(min, Math.abs(sum-sum2));				// 인구수
+			/*System.out.println(Math.abs(sum-sum2));
+			System.out.println();*/
 		}
 	}
 		if(flag) {													// 플래그: 만약 선거구가 안나누어진다면

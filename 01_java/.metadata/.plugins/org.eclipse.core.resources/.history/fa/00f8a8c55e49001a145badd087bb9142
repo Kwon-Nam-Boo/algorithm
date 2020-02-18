@@ -1,0 +1,26 @@
+package com.object;
+
+class Book{
+	int num;
+	String title;
+	
+	public Book(int num, String title) {
+		this.num = num;
+		this.title = title;
+	}
+	@Override
+	public String toString() {
+		return "Book [num=" + num + ", title=" + title + "]";
+	}
+	
+	
+}
+
+public class HashEqualTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

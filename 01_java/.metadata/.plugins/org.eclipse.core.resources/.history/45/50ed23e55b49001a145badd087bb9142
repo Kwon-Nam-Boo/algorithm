@@ -1,0 +1,17 @@
+package com.object;
+// final: class, method, variable
+
+final class Some{
+	final int num =999;
+	void go() {
+		num =100;
+	}
+}
+public class FinalTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

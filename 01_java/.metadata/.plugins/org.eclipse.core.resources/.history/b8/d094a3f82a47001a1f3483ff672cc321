@@ -1,0 +1,23 @@
+package com.ssafy.products;
+
+import java.util.ArrayList;
+
+public class ProductMgr {
+	int N =5;
+	private static ArrayList<Product> pro;
+
+	ProductMgr(){
+		pro = new ArrayList<Product>();
+	}
+	
+	public void addProduct(Product product) {
+		pro.add(product);
+	}
+	public void addProduct(TV tv) {
+		pro.add(tv);
+	}
+	public void addProduct(Refrigerator refrigerator) {
+		pro.add(refrigerator);
+	}
+
+}

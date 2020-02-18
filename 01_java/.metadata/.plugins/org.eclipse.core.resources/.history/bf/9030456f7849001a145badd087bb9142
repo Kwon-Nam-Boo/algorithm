@@ -1,0 +1,19 @@
+package com.ssafy;
+
+public class MovieMgr extends Movie {
+
+	public MovieMgr() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public MovieMgr(String title, String director, int grade, String genre) {
+		super(title, director, grade, genre);
+		// TODO Auto-generated constructor stub
+	}
+
+	public MovieMgr(String title, String director, int grade, String genre, String summary) {
+		super(title, director, grade, genre, summary);
+		// TODO Auto-generated constructor stub
+	}
+
+}

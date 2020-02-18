@@ -1,0 +1,19 @@
+package com.exception;
+
+class MyException extends Exception{}
+
+public class CustomExceptionTest {
+	
+	public void check(int num) {
+		if(num>0) {
+			System.out.println("result: "+ ++n);
+		}else {
+			throw new Exception();
+		}
+	}
+	
+	public static void main(String[] args) {
+		CustomExceptionTest c = new CustomExceptionTest();
+		c.check(-8);
+	}
+}	

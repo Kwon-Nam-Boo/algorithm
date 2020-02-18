@@ -1,0 +1,18 @@
+package com.ssafy.products;
+
+public class ProductTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ProductMgr mgr = new ProductMgr();
+		mgr.addProduct(new Product(11, "gameboy", 100000, 4));
+		mgr.addProduct(new TV(21, "UHD TV", 18000000, 10, "samsung", 150));
+		mgr.addProduct(new Refrigerator(31, "kimchi", 5000000, 2, 400));
+		
+		mgr.getAllProducts();
+		
+		mgr.findByName("kimchi");
+		mgr.searchForTv();
+	}
+
+}

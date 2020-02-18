@@ -1,0 +1,40 @@
+package com.io;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class CharacterStreamTest {
+	public static void main(String[] args) throws Exception{
+		File f = File.createTempFile("sample", "txt");
+		
+		
+		//파일에서 쓰기
+		FileWriter fw = new FileWriter(f);
+		BufferedWriter bw = new BufferedWriter(fw);
+		
+		bw.write("안녕하세요");
+		bw.newLine();
+		bw.write("빨리");
+		bw.newLine();
+		bw.write("집에");
+		bw.newLine();
+		bw.write("가고");
+		bw.newLine();
+		bw.write("싶다");
+		bw.newLine();
+		bw.close();
+		fw.close();
+		
+		// 파일에서 읽어오기
+		FileReader fr = new FileReader(f);
+		BufferedReader br = new BufferedReader(fr);
+		
+		for (String str;(str = br.readLine()) != null; ) {
+			System.out.println(str);
+		}
+		
+	}
+}

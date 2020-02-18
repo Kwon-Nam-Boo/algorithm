@@ -1,0 +1,9 @@
+package com.ssafy.book;
+
+import com.ssafy.books.Book;
+
+public interface IBookMgr {
+	public void addBook(Book book);
+	public Book[] getAllBooks();
+	public Book[] findByIsbn(int isbn) 
+}

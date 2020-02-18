@@ -1,0 +1,15 @@
+package com.io;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class FileCopy {
+	public static void main(String[] args) {
+		FileInputStream fis;
+		FileOutputStream fos;
+		
+		fis = new FileInputStream("src\\com\\io\\FileCopy.java");	//원본파일
+		fos = new FileOutputStream("src\\com\\io\\FileCopy2.java");	//복사파일
+		
+	}
+}

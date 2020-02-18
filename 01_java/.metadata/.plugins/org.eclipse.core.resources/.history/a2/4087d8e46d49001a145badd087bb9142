@@ -1,0 +1,49 @@
+package com.ssafy;
+
+public class CarMgr extends Car {
+	
+	private Car[] cars = new Car[100];
+	private int index;
+	
+	public void add(Car c) {
+		cars[index++] =c;
+	}
+	public Car[] search(){
+		return cars;
+	}
+	public Car search(String num) {
+		for(Car c : cars) {
+			if(c==null) break;
+			if(c.getNum().equals(num)) {
+				return c;
+			}
+		}
+		return new Car();
+		
+	}
+	public Car[] search(int price) {
+		Car[] tmp = new Car[100];
+		int idx =0;
+		for(Car c : cars) {
+			if(c==null) break;
+			if(c.getPrice()<price) {
+				tmp[idx++]= c;
+			}
+		}
+		return tmp;
+	}
+	public void update(String num, int price) {
+		
+	}
+	public void delete(String num) {
+		
+	}
+	/*public int size() {
+		
+	}
+	public int totlaPrice() {
+		
+	}
+	*/
+	
+}

@@ -1,0 +1,12 @@
+package com.computer;
+
+public class Parts {
+	private String maker;
+	private int price;
+	
+	public void info() {
+		System.out.println("maker: " + maker);
+		System.out.println("price: " + price);
+		System.out.println("------------------------");
+	}
+}

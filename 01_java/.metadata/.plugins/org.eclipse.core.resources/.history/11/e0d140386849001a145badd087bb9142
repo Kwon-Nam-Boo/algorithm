@@ -1,0 +1,20 @@
+package com.ssafy;
+
+public class Car {
+	private String num;
+	private String model;
+	private int price;
+	
+	public Car() {
+		this(null,null,0);
+	}
+	public Car(String num, String model, int price) {
+		super();
+		this.num = num;
+		this.model = model;
+		this.price = price;
+	}
+	
+	
+
+}

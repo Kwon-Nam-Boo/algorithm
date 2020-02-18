@@ -1,0 +1,12 @@
+package com.ssafy.product;
+
+import com.ssafy.products.Product;
+
+public interface IProductMgr {
+	void addProduct(Product product);		// 상품정보 저장
+	void getAllProducts();					// 전체 검색
+	void findById(int id);
+	void findByName(String name);
+	
+	
+}

@@ -1,0 +1,22 @@
+package com.io;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class FileCopy {
+	public static void main(String[] args) {
+		FileInputStream fis;
+		FileOutputStream fos;
+		
+		try {
+			fis = new FileInputStream("src\\com\\io\\FileCopy.java");
+			fos = new FileOutputStream("src\\com\\io\\FileCopy2.java");	//복사파일
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	//원본파일
+		
+		
+	}
+}

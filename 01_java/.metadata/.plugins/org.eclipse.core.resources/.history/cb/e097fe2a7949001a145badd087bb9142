@@ -1,0 +1,18 @@
+package com.ssafy;
+
+public class MovieMgr extends Movie {
+	
+	private Movie[] movies = new Movie[100];
+	private int index;
+	
+	private static MovieMgr instance;
+	
+	public static MovieMgr getinstance() {
+		if(instance == null) {
+			instance = new MovieMgr();
+		}
+		return instance;
+	}
+
+
+}

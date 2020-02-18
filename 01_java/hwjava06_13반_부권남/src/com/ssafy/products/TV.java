@@ -2,8 +2,8 @@ package com.ssafy.products;
 
 public class TV extends Product {
 	
-	String brand;
-	int tvSize;
+	private String brand;
+	private int tvSize;
 	
 	public TV(int id, String name, int price, int num,String brand, int tvSize) {
 		super(id, name, price, num);

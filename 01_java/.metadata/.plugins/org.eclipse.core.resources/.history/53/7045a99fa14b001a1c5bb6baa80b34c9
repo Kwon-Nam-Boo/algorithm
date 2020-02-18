@@ -1,0 +1,10 @@
+package com.ssafy;
+
+public class test {
+	
+	public static void main(String[] args) {
+		String[] a = new String[2];
+		a[1] ="aaa";
+		System.out.println(a[0]+ a[1]);
+	}
+}

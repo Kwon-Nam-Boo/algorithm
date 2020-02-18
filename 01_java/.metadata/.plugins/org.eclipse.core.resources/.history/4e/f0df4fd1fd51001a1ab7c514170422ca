@@ -1,0 +1,32 @@
+package com.exception;
+
+class YourException extends Exception{
+	
+}
+class MyException extends Exception{
+	String message;
+	
+	public MyException(String message) {
+		this.message = message;
+	}
+}
+
+public class CustomExceptionTest {
+	
+	public void check(int num) throws MyException {
+		if(num>0) {
+			System.out.println("result: "+ ++num);
+		}else {
+			throw new MyException("이게뭐람!");
+		}
+	}
+	
+	public static void main(String[] args) throws MyException {
+		CustomExceptionTest c = new CustomExceptionTest();
+		
+		 try{
+			
+		}
+		c.check(-8);
+	}
+}	

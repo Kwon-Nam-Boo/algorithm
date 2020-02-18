@@ -1,0 +1,40 @@
+package com.collection;
+
+import com.abst.Shape;
+import java.util.ArrayList;
+
+public class ArrayListTest {
+
+	public static void main(String[] args) {
+		ArrayList<Shape> shapes = new ArrayList<>();
+		
+		
+		
+		
+		ArrayList<Integer> nums = new ArrayList<>();
+		nums.add(100);
+		nums.add(200);
+		nums.add(300);
+		nums.add(200);
+		nums.add(100);
+		
+		for(int num:nums) {
+			System.out.println(num);
+		}
+		System.out.println("------------------");
+		
+		
+		// generic Programming
+		ArrayList<String> seasons = new ArrayList<>();
+		seasons.add("spring");
+		seasons.add("summer");
+		seasons.add("fall");
+		seasons.add("spring");
+		seasons.add("winter");
+		
+		for(String season: seasons) {
+			System.out.println(season);
+		}
+	}
+
+}
