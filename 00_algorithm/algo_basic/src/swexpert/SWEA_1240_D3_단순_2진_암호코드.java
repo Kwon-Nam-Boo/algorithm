@@ -12,6 +12,7 @@ public class SWEA_1240_D3_단순_2진_암호코드 {
 	
 	
 	private static List<Integer> crypto = new ArrayList<>(Arrays.asList(13,25,19,61,35,49,47,59,55,11));	// 이진 암호를 10진수로 표현
+	//private static int[] crypto ={13,25,19,61,35,49,47,59,55,11};
 	private static int[] ans;
 	private static String[] arr;
 	
@@ -49,6 +50,19 @@ public class SWEA_1240_D3_단순_2진_암호코드 {
 					int count = 0;
 					for (int k = j; k < 56+j; k+=7) {		// 7단어씩 끊어서 해당 7자리 이진수가 crypto에 존재하는 수인지 확인한다.
 						String tmp = line.substring(k, k+7);
+						
+						/*int ab = Integer.valueOf(tmp,2);
+						int f =0;
+						for (int l = 0; l < crypto.length; l++) {
+							if(ab == crypto[l]) {
+								ans[count] = l;					//배열로 풀면 빠르긴하더라
+								f=1;
+								break;
+							}
+						}
+						if(f==0) {
+							ans[count] = -1;
+						}*/
 				
 						ans[count] = crypto.indexOf(Integer.valueOf(tmp,2));
 						count++;

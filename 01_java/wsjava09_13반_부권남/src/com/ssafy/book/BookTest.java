@@ -2,6 +2,8 @@ package com.ssafy.book;
 
 import java.util.ArrayList;
 
+
+
 public class BookTest {
 
 	public static void main(String[] args) throws Exception {
@@ -15,6 +17,45 @@ public class BookTest {
 			System.out.println(test.get(i));
 		}
 		System.out.println();
+		
+		
+		 try{																		// 없는번호!(판매)
+			 bmgr.sell("10", 1);
+		}catch(QuantityException q) {
+			System.out.println(q);
+		}catch(ISBNNotFoundException i) {
+			System.out.println(i);
+		}
+		 
+		 try{			
+			 bmgr.sell("12", 2);
+			 bmgr.sell("12", 1000000);													// 재고 부족!
+		 }catch(QuantityException q) {
+			 System.out.println(q);
+		 }catch(ISBNNotFoundException i) {
+			 System.out.println(i);
+		 }
+		
+		ArrayList<Book> test2 = bmgr.search();
+		for (int i = 0; i < test2.size(); i++) {									
+			System.out.println(test2.get(i));
+		}
+		System.out.println();
+		
+		try{
+			 bmgr.buy("12", 5);														// 정상 거래
+			 bmgr.buy("10", 5);														// 없는 번호(구매)
+		 }catch(ISBNNotFoundException i) {
+			 System.out.println(i);
+		 }
+		
+		test = bmgr.search();
+		for (int i = 0; i < test.size(); i++) {									
+			System.out.println(test.get(i));
+		}
+		System.out.println();
+		
+		System.out.println("총 재고금액: " + bmgr.getTotalAmount());
 		
 		bmgr.close();
 	}

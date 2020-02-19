@@ -16,7 +16,7 @@ public class Novel extends Book {
 	}
 	@Override
 	public String toString() {
-		return super.toString()+ "genre=" + genre;
+		return super.toString()+ " genre=" + genre;
 	}
 	
 	

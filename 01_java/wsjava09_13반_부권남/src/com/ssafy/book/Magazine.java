@@ -21,7 +21,7 @@ public class Magazine extends Book {
 
 	@Override
 	public String toString() {
-		return super.toString() + "month=" + month;
+		return super.toString() + " month=" + month;
 	}
 
 	

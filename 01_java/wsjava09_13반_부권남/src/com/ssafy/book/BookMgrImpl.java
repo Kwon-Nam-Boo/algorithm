@@ -52,7 +52,17 @@ public class BookMgrImpl implements IBookMgr{
 
 	@Override
 	public void add(Book book) {
-		bk.add(book);
+		if(bk.isEmpty()) {
+			bk.add(book);
+		}else {
+			for (int i = 0; i < bk.size(); i++) {
+				if(bk.get(i).getIsbn().equals(book.getIsbn())) {
+					System.out.println("이미있는데요..?");
+					return;
+				}
+			}
+			bk.add(book);
+		}
 	}
 
 	@Override
@@ -61,10 +71,10 @@ public class BookMgrImpl implements IBookMgr{
 	}
 
 	@Override
-	public void sell(String isbn, int quantity) throws QuantityException, ISBNNotFoundException{
+	public void sell(String isbn, int quantity ) throws QuantityException, ISBNNotFoundException{
 		for(Book book : bk) {
 			if(isbn.equals(book.getIsbn())){
-				int current =book.getQuantity()-1;
+				int current =book.getQuantity()-quantity;
 				if(current>= 0) {
 					book.setQuantity(current);
 					return;
@@ -81,7 +91,7 @@ public class BookMgrImpl implements IBookMgr{
 	public void buy(String isbn, int quantity) throws ISBNNotFoundException {
 		for(Book book : bk) {
 			if(isbn.equals(book.getIsbn())){
-				int current =book.getQuantity()-1;
+				int current =book.getQuantity() + quantity;
 					book.setQuantity(current);
 					return;
 			}
@@ -105,6 +115,7 @@ public class BookMgrImpl implements IBookMgr{
 		if(file.exists()) {
 			FileInputStream fis = new FileInputStream("Book.dat");
 			ObjectInputStream ois = new ObjectInputStream(fis);
+			bk =(ArrayList<Book>) ois.readObject();
 			fis.close();
 			ois.close();
 			
