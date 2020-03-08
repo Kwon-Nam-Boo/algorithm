@@ -25,9 +25,7 @@ class member{
 	public void go(int a) {
 		System.out.println("go");
 	}
-	/*public void go(int a, String b) {
-		System.out.println("go");
-	}*/
+	
 	
 }
 

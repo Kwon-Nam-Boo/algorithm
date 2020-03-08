@@ -14,10 +14,10 @@ public class PermutationTest {
 		//makePermutationVisited(3, new char[3], new boolean[chars.length]);
 		
 		//swap을 이용해서 순열 구하기
-		//makePermutationSwap(3, 0);
+		makePermutationSwap(3, 0);
 		
 		//next_permutation을 이용한 순열
-		makePermutationNP();
+		//makePermutationNP();
 	}
 	private static void makePermutationNP() {
 		do {
@@ -70,7 +70,7 @@ public class PermutationTest {
 				makePermutationSwap(r, depth+1);
 				swap(depth,i);
 			}
-			
+			 
 		}
 	}
 	private static void swap(int a, int b) {

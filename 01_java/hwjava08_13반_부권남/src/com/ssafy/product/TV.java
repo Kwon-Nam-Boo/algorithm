@@ -7,7 +7,6 @@ public class TV extends Product {
 	
 	public TV(int id, String name, int price, int num,String brand, int tvSize) {
 		super(id, name, price, num);
-		// TODO Auto-generated constructor stub
 		this.brand = brand;
 		this.tvSize = tvSize;
 	}

@@ -9,7 +9,7 @@ public class SWEA_2817_D3_부분_수열의_합 {
 	
 	private static int N;
 	private static int[] nums;
-	private static int[] arr;
+	private static int sum;
 	private static int result;
 	private static int count;
 
@@ -29,7 +29,6 @@ public class SWEA_2817_D3_부분_수열의_합 {
 				nums[j] = Integer.parseInt(st.nextToken());
 			}
 			count=0;
-			arr = new int[N];
 			subset();
 			sb.append(count).append("\n");
 		}
@@ -38,20 +37,12 @@ public class SWEA_2817_D3_부분_수열의_합 {
 	
 	public static void subset(){
 		for (int i = 0; i < (1<<N); i++) {
-			for (int j = 0; j < arr.length; j++) {
-				arr[j] =0;
-			}
-			int c =0;
+			sum=0;
 			for (int j = 0; j < N; j++) {
 				if((i & (1<< j))>0){
-					arr[c] = nums[j];
-					c++;
+					sum+=nums[j];
+					if(sum>result) break;
 				}
-			}
-			int sum=0;
-			for (int j = 0; j < arr.length; j++) {
-				sum+=arr[j];
-				if(sum>result) break;
 			}
 			if(sum == result) {
 				count++;

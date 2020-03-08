@@ -2,9 +2,11 @@ package algo_ad.day1;
 
 import java.util.Arrays;
 
+import javax.sound.midi.Synthesizer;
+
 public class CombinationTest {
 
-	private static char[] chars = {'A','B','C','D'};
+	private static char[] chars = {'A','B','C','D','E'};
 	public static void main(String[] args) {
 		//chars에서 3개를 뽀는 조합을 만들어보자
 		int r = 3;
@@ -22,6 +24,7 @@ public class CombinationTest {
 		}else if(n<r) {
 			return;
 		}else {
+			System.out.println(n + " : " +r);
 			temp[r-1] = chars[n-1];	// n,r은 모두 개수, 우리가 사용하는 것은  idx(0부터 시작);
 			makeCombination(n-1, r-1, temp);
 			makeCombination(n-1, r, temp);
