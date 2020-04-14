@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<script type="text/javascript">
+		var tmpNum = Math.floor(Math.random()*10+1);
+		
+		var flag =false;
+		for (var i = 1; i <=10; i++) {		// 10 회 실행
+			var num = parseInt(prompt("숫자를 선택해주세요!(1~10)"));
+			if(num == tmpNum){
+				alert("정답입니다!"+"("+ tmpNum+") " + i +"번만에 성공!") ;
+				flag =true;
+				break;
+			}else{
+				alert("틀렸습니다!");
+			}
+		}
+		if(!flag){
+			alert("이정도면 일부로 틀리시는 군요!") ;
+			document.write("정답은! "+"("+ tmpNum+")" + "<br>");
+		}else{
+			document.write("정답은! "+"("+ tmpNum+")" + "<br>");
+			document.write(i +"번만에 성공!");	
+		}
+		
+	</script>
+	<body>
+	
+	</body>
+</html>

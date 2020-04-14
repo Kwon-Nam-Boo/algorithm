@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+		
+		<style type="text/css">
+			#container{
+				width: 960px;
+				padding: 20px;
+				margin: 0 auto;	
+				border: 1px solid red;	
+			}
+			header{
+				padding:20px;
+				margin-bottom: 20px;
+				background-color: #88cc00;	/* 연두  */
+				font-family: 'Nanum Gothic Coding', monospace
+			}
+			h1{
+				font-family: 'Black Han Sans', sans-serif;
+				
+			}
+			section{
+				padding: 20px;
+				width: 620px;
+				margin-bottom: 20px;
+				border: 1px solid #e0e0eb;	/* 연한 회색*/
+				float:left;
+			}
+			#a1{
+				width: 560px;
+				margin-bottom: 20px;
+				margin: 0 auto;	
+				background-color: yellow;
+			}
+			aside{
+				width:220px;
+				padding:20px;
+				margin-bottom: 20px;
+				float:right;
+				background-color: #e0e0eb;		/*연한 회색  */
+			}
+			footer{
+				padding: 20px;
+				border:1px solid #e0e0eb;
+				clear:both;			/* 왼쪽 오른쪽으로 떠버린걸 무효*/
+			}
+			
+			
+			table{
+				width: 560px;
+				margin-bottom: 20px;
+				margin: 0 auto;	
+				border-collapse: collapse; /* 표(table)의 테두리와 셀(td)의 테두리 사이의 간격을 없앱니다 */ 
+			}
+			th, tr{
+				height: 35px;
+				font-family: 'Nanum Gothic Coding', monospace
+			}
+			
+			th{	
+				background-color: #0047b3;
+				color: white;
+				text-align: center;
+			}
+			tr:nth-child(even) {			/*짝수*/
+ 				 background-color: #cce0ff;
+ 				 border-bottom: 1px solid gray;
+ 				 text-align: center;
+			}	
+			tr:nth-child(odd) {				/*홀수*/
+ 				 background-color: #80b3ff;
+ 				 border-bottom: 1px solid gray;
+ 				 text-align: center;
+			}	
+		</style>
+	</head>
+	<body>
+		<div id ="container">
+			<header>	<!-- 헤더 -->
+				<h1>ONLINE SSAFY</h1>
+				<a href="">메뉴1</a>&nbsp;
+				<a href="">메뉴2</a>&nbsp;
+				<a href="">메뉴3</a>&nbsp;
+				<a href="">메뉴4</a>&nbsp;
+			</header>
+			<section >	<!-- 섹션 -->
+				<h2>기사1</h2>
+				<article id ="a1">
+					<p>재산권의 행사는 공공복리에 적합하도록 하여야 한다. 정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다.</p>
+					<p>대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 언론,출판에 대한 허가나 검열과 집회,결사에 대한 허가는 인정되지 아니한다.</p>
+				</article>
+				<h2>기사2</h2>
+				<article>
+					<table>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+							<th>작성자</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>이 헌법시행 당시의 대법원장과 대법원판사가 ...</td>
+							<td>강감찬</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td> 대한민국은 국제평화의 유지...</td>
+							<td>장영실</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td> 정당은 법률이 정하는 바에...</td>
+							<td>안중근</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td> 공공필요에 의한 재산권의 수용...</td>
+							<td>김두한</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td> 국회의원은 그 지위를 남용하여 국가...</td>
+							<td>계백</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td> 정기회의 회기는 100일을, 초과할 수 없다...</td>
+							<td>최무선</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<aside>		<!-- aside -->
+				<h2>SIDEBAR</h2>
+				<p>모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.</p>
+			</aside>
+			<footer>	<!-- 푸터 -->
+				<h2>Footer</h2>
+				<p>이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다.</p>
+			</footer>
+		</div>
+	</body>
+</html>

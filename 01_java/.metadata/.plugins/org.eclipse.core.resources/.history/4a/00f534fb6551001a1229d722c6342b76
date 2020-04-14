@@ -1,8 +1,0 @@
-package com.ssafy.product;
-
-import com.ssafy.products.Product;
-
-public interface IProductMgr {
-	void addProduct(Product product);
-	
-}

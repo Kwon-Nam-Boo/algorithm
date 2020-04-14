@@ -3,6 +3,7 @@ package algo_basic.day7;
 import java.util.Arrays;
 
 public class P370_MergeSort {
+	
 	public static void main(String[] args) {
 		int arr[] = {69,10,30,2,16,8,31,22};
 		//arr을 병합 정렬하고 결과를 출력하시오

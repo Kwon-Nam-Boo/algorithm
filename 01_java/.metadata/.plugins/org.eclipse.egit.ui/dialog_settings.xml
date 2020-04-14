@@ -10,6 +10,12 @@
 	<list key="RepositorySelectionPage.UsedUris">
 		<item value="https://lab.ssafy.com/03/seoul13/java-workshop-homework.git"/>
 	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="KwonNam Boo &lt;namboo1994@gmail.com&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="KwonNam Boo &lt;namboo1994@gmail.com&gt;"/>
+	</list>
 	<section name="GitImportWizard">
 	</section>
 	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">

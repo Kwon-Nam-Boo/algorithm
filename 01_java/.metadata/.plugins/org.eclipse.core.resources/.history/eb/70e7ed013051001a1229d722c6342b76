@@ -1,9 +1,0 @@
-package com.ssafy;
-
-class Bill{}
-class Tom{}
-interface Hillary{}
-
-public class LittleTom extends Tom implements Hillary{
-	
-}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script>
+			function Member(id, name){
+				this.id = id;
+				this.name = name;
+			}
+			Member.prototype.insa = function(){
+				console.log(this.name + "하이")
+			}
+			var m1 = new Member("a","a님");
+			var m2 = new Member("b","b님");
+			m1.insa();
+			m2.insa();
+			
+			console.dir(m1);
+			console.dir(m2);
+			/* console.dir(Member);
+			var m ={};
+			console.dir(m); */
+		</script>
+	</body>
+</html>

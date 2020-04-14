@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+      		table, th, td {
+        	border: 1px solid #bcbcbc;
+      		}
+    </style>
+		<script type="text/javascript">
+			document.write("<table>");
+			for (var i = 2; i <= 9; i++) {
+				document.write("<tr>");
+				for (var j = 1; j <=9; j++) {
+					document.write("<td>"+ i +"*"+j +"="+ (i*j)+ "</td>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

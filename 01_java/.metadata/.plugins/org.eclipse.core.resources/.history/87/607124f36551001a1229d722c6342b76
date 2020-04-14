@@ -1,5 +1,0 @@
-package com.ssafy.product;
-
-public interface IProductMgr {
-
-}

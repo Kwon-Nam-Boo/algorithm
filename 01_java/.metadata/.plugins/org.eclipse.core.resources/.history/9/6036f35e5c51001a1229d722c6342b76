@@ -1,6 +1,0 @@
-package com.ssafy.book;
-
-
-public interface IBookMgr {
-	public void addBook(Book book);
-}

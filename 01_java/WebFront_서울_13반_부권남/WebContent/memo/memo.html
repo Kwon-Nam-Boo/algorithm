@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<!-- 합쳐지고 최소화된 최신 CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" type ="text/css" href="memo.css">
+	</head>
+	<body>
+		<!-- 전체 영역 -->
+		<div class="memo-area">
+			<button> 메모 추가</button>
+			<!-- 하나의 전체 메모 표시 -->
+			<div id ="memo1" class="memo-note" >
+				<!-- bar  -->
+				<div class ="memo-bar">
+					<span id= "arrow1" class="glyphicon glyphicon-chevron-up" aria-hidden="true" onclick=mini(id) data-deg=0></span>
+					<span id = "pin1" class="glyphicon glyphicon-pushpin" aria-hidden="true" onclick = pinMemo(id) data-deg=0></span>
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+				</div>
+				<!-- content -->
+				<div class="memo-edit">
+					<textarea class ="memo-edit-area"></textarea>
+				</div>
+			</div>
+			
+			<div id ="memo2" class="memo-note">
+				<!-- bar  -->
+				<div class ="memo-bar">
+					<span id= "arrow2" class="glyphicon glyphicon-chevron-up" aria-hidden="true" onclick = mini(id) data-deg=0></span>
+					<span id = "pin2" class="glyphicon glyphicon-pushpin" aria-hidden="true" onclick = pinMemo(id) data-deg=0></span>
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+				</div>
+				<!-- content -->
+				<div class="memo-edit">
+					<textarea class ="memo-edit-area"></textarea>
+				</div>
+			</div>
+			
+		</div>
+		<script>
+			function mini(id){
+				var currDeg = document.getElementById(id).dataset.deg;
+				var memoId = document.getElementById(id).parentNode.parentNode;
+				if(currDeg== 0){
+					currDeg = 180;
+					memoId.style.height = "20px";
+				}else{
+					currDeg = 0;
+					memoId.style.height = "180px";
+				}
+				document.getElementById(id).style.transform="rotate(" + currDeg + "deg)";
+				// 현재 deg로 바꿔준다.
+				document.getElementById(id).dataset.deg = currDeg;
+			}
+			
+			function pinMemo(id){
+				var currDeg = document.getElementById(id).dataset.deg;
+				if(currDeg == 0){
+					currDeg= -45;
+					document.getElementById(id).style.color ="red";
+				}else{
+					currDeg = 0;
+					document.getElementById(id).style.color ="black";
+				}
+				document.getElementById(id).style.transform="rotate(" + currDeg + "deg)";
+				
+				document.getElementById(id).dataset.deg = currDeg;
+			}
+
+		</script>
+	</body>
+</html>

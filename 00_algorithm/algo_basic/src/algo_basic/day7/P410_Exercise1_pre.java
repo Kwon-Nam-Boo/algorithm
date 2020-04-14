@@ -88,6 +88,7 @@ public class P410_Exercise1_pre {
 	
 	public static void main(String[] args) {
 		makeTree();
+		System.out.println(Arrays.toString(tree));
 		preOrder(tree[1]);
 		System.out.println();
 		inOrder(tree[1]);

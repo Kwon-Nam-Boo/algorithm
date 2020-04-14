@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\SSAFY\git\myssafy\01_java\student-multi"/>
+		<item value="C:\SSAFY\git\myssafy\01_java\hwjava0324_13반부권남"/>
+		<item value="C:\SSAFY\git\myssafy\01_java"/>
 		<item value="C:\SSAFY\01_java\hwjava03_13반_부권남"/>
 		<item value="C:\SSAFY\01_java\wsjava04_13반_부권남"/>
 		<item value="C:\SSAFY\git\java-workshop-homework"/>
 		<item value="C:\SSAFY\01_java\FirstProject"/>
 	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\SSAFY\git\myssafy\01_java\HappyHouse_Java_지역_반_이름1_이름2"/>
+			<item value="C:\Users\lukas\Downloads\HappyHouse_Java_지역_반_이름1_이름2"/>
+			<item value="C:\SSAFY\git\myssafy\01_java\KillCorona3PStudentForChat"/>
+			<item value="C:\SSAFY\git\myssafy\01_java\hwjava0324_13반부권남"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+			<item value="C:\Users\lukas\Downloads\HappyHouse_Java_지역_반_이름1_이름2.zip"/>
+		</list>
+	</section>
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.web.ui"/>
 		</list>
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">

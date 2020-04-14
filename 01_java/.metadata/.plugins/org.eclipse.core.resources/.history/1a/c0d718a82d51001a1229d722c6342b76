@@ -1,5 +1,0 @@
-package com.inter;
-
-public class ICircle implements IShape{
-
-}
