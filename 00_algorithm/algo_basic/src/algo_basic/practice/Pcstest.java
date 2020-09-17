@@ -15,12 +15,11 @@ public class Pcstest {
 	
 	public static void main(String[] args) {
 		// nPrVisted
-		result= new char[R];
-		visited =new boolean[N.length];
+		visited = new boolean[N.length];
+		result = new char[R];
 		nPrVisted(0);
 		System.out.println();
 		// nPrSwap
-		result= new char[R];
 		nPrSwap(0);
 		System.out.println();
 		// NP()
@@ -28,33 +27,34 @@ public class Pcstest {
 		System.out.println();
 		Arrays.sort(N);
 		// nCr
-		result= new char[R];
+		result = new char[R];
 		nCrRecursion(0, 0);
 		System.out.println();
 		//nCr
-		result= new char[R];
 		nCrDef(N.length, R);
 		System.out.println();
-		// subSetBit
+		//subSetBit
 		subSetBit();
 		System.out.println();
 		// subSetList
 		subSetList(0, 0);
 		System.out.println();
 		// subSetRecursion
+		visited = new boolean[N.length];
 		subSetRecursion(0);
 	}
 	public static void nPrVisted(int r) {
-		if(r ==R) {
+		// 
+		if(r == R) {
 			System.out.println(Arrays.toString(result));
 			return;
 		}
 		for (int i = 0; i < N.length; i++) {
 			if(!visited[i]) {
 				visited[i] = true;
-				result[r] = N[i];
+				result[r] = N[i]; 
 				nPrVisted(r+1);
-				visited[i]=false;
+				visited[i] = false;
 			}
 		}
 		
@@ -62,18 +62,21 @@ public class Pcstest {
 	public static void nPrSwap(int d){
 		if(d == R) {
 			System.out.println(Arrays.toString(Arrays.copyOfRange(N, 0, R)));
-			return;
+			//System.out.println(Arrays.toString(N));
 		}
 		for (int i = d; i < N.length; i++) {
-			swap(d,i);
+			swap(i,d);
 			nPrSwap(d+1);
-			swap(d,i);
+			swap(i,d);
+			
 		}
 	}
 	public static void swap(int n, int m) {
-		char tmp = N[n];
+		char tmp;
+		tmp = N[n];
 		N[n] = N[m];
 		N[m] = tmp;
+	
 	}
 	public static void NP() {
 		do {
@@ -82,26 +85,29 @@ public class Pcstest {
 	}
 	
 	public static boolean nPrNP() {
-		int i;
-		for (i = N.length-2; i>=0 ; i--) {
-			if(N[i]<N[i+1]) break;
+		
+		int a;
+		for (a = N.length-2; a >=0; a--) {
+			if(N[a] < N[a+1]) break;
 		}
-		if(i<0) {
-			return false;
+		if(a<0) return false;
+		
+		int b;
+		for (b = N.length-1; b >=0; b--) {
+			if(N[a]<N[b]) break;
 		}
-		int j;
-		for (j = N.length-1; j>=0; j--) {
-			if(N[i]<N[j]) break;
+		
+		swap(a,b);
+		
+		for (int i = a+1, j = N.length-1; i<j; i++,j--) {
+			swap(i,j);
 		}
-		swap(i,j);
-		for (int a = i+1, b =N.length-1; a < b; a++, b--) {
-			swap(a,b);
-		}
+		
 		return true;
 	}
 	
 	public static void nCrRecursion(int r, int k) {
-		if(r == R) {
+		if(r == R){
 			System.out.println(Arrays.toString(result));
 			return;
 		}
@@ -112,30 +118,30 @@ public class Pcstest {
 	}
 	
 	public static void nCrDef(int n, int r) {
-		if(r==0) {
+		if(r == 0) {
 			System.out.println(Arrays.toString(result));
 			return;
-		}
-		else if(r>n) {
+		}else if(n<r){
 			return;
 		}
-		result[r-1] = N[n-1];
-		// 넣기
-		nCrDef(n-1, r-1);
-		// 안넣기
-		nCrDef(n-1, r);
+		else {
+			result[r-1] = N[n-1];
+			nCrDef(n-1, r-1);
+			nCrDef(n-1, r);
+		}
 	}
 	
 	public static void subSetBit() {
 		for (int i = 0; i < (1<<N.length); i++) {
 			List<Character> tmp = new ArrayList<>();
 			for (int j = 0; j < N.length; j++) {
-				if((i & (1<<j))>0){
+				if((i & 1<<j) > 0) {
 					tmp.add(N[j]);
 				}
 			}
 			System.out.println(tmp);
 		}
+		
 	}
 	public static void subSetList(int r, int k) {
 		System.out.println(list);
@@ -144,7 +150,7 @@ public class Pcstest {
 		}
 		for (int i = k; i < N.length; i++) {
 			list.add(N[i]);
-			subSetList(r+1,i+1);
+			subSetList(r+1, i+1);
 			list.remove(list.size()-1);
 		}
 	
@@ -154,15 +160,16 @@ public class Pcstest {
 			print();
 			return;
 		}
-		visited[r] =true;
+		visited[r] = false;
 		subSetRecursion(r+1);
-		visited[r] =false;
+		visited[r] = true;
 		subSetRecursion(r+1);
 
 	}
 	public static void print() {
-		for (int i = 0; i < visited.length; i++) {
-			if(visited[i]){
+		
+		for (int i = 0; i < N.length; i++) {
+			if(visited[i]) {
 				System.out.print(N[i] + " ");
 			}
 		}

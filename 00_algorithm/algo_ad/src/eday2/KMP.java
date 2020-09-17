@@ -22,7 +22,7 @@ public class KMP {
 		return pi;
 	}
 	
-	static void KMP(String origin , String pattern) {
+	static boolean KMP(String origin , String pattern) {
 		int[] pi = getPi(pattern);
 		int j = 0;
 		for (int i = 0; i < origin.length(); i++) {
@@ -34,6 +34,7 @@ public class KMP {
 			if(origin.charAt(i) == pattern.charAt(j)) {
 				if(j == pattern.length() -1) {
 					System.out.println("ㅇㅋ" + (i - pattern.length()+1));
+					return true;
 				}
 				// 맞았지만 패턴이 끝나지 않앗다면 J를 하나 증가
 				else
@@ -41,12 +42,13 @@ public class KMP {
 			}
 			
 		}
+		return false;
 	}
 	
 	
 	public static void main(String[] args) {
-		String origin = "HELLOSSAFY";
-		String pattern = "LOSS";
-		KMP(origin,pattern);
+		String origin = "사직동";
+		String pattern = "사직";
+		System.out.println(KMP(origin,pattern));
 	}
 }

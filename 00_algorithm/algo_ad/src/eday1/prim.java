@@ -46,7 +46,7 @@ public class prim {
 			for (int j = 0; j < V; j++) {
 				//check가 안되있으면서, 간선은 존재하고, 그 간선이 key값보다 작다면 키값을 업데이트
 				if(!check[j] && adj[index][j] != 0 && key[j] > adj[index][j]) {
-					p[j] = index;
+					//p[j] = index;
 					key[j] = adj[index][j];
 				}
 			}
@@ -57,6 +57,6 @@ public class prim {
 			result+= key[i];
 		}
 		System.out.println(result);
-		System.out.println(Arrays.toString(p));
+		//System.out.println(Arrays.toString(p));
 	}
 }

@@ -25,10 +25,10 @@ public class BOJ_1260_DFS와BFS {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
+		N = Integer.parseInt(st.nextToken()); // 정점의개수 N 
+		line = Integer.parseInt(st.nextToken()); // 간선의개수 M 
+		start = Integer.parseInt(st.nextToken()); // 시작정점 V
 		
-		N = Integer.parseInt(st.nextToken());
-		line = Integer.parseInt(st.nextToken());
-		start = Integer.parseInt(st.nextToken());
 		list = new ArrayList[N+1];
 		
 		for (int i = 1; i <= N; i++) {
@@ -44,26 +44,30 @@ public class BOJ_1260_DFS와BFS {
 			list[a].add(b);								// 양방향
 			list[b].add(a);
 		}
-		System.out.println(Arrays.toString(list));
+		
+//		System.out.println(Arrays.toString(list));
+		
 		for(int i = 1; i<=N; i++) {
 			Collections.sort(list[i]);
 		}
 		
-		dfs(start);
+		dfs(start, 0);
 		sb.append("\n");
 		visited = new boolean[N+1];
 		bfs(start);
 		System.out.println(sb);
 	}
 	
-	public static void dfs(int d) {
+	public static void dfs(int d, int cnt) {
 		
 		visited[d] =true;
 		sb.append(d).append(" ");
+		
 		for (int i = 0; i < list[d].size(); i++) {
 			int child = list[d].get(i);
 			if(!visited[child]) {
-				dfs(child);
+				dfs(child, cnt+1);
+				visited[d] = false;
 			}
 		}
 	}

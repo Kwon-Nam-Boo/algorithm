@@ -33,6 +33,7 @@ public class BOJ_2630_색종이_만들기 {
 		if(N==0) return;
 		int nx = x+ (N/2);
 		int ny = y+ (N/2);
+		
 		if(!check(x,y,N/2)) {					//  위 아래 방법 둘다 가능
 			cut(x,y,N/2);
 		}

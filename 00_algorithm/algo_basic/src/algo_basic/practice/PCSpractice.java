@@ -39,6 +39,7 @@ public class PCSpractice{
 		// subSetList
 		subSetList(0, 0);
 		// subSetRecursion
+		
 		visited = new boolean[N.length];
 		subSetRecursion(0);
 		
@@ -57,8 +58,6 @@ public class PCSpractice{
 				visited[i] =false;
 			}
 		}
-		
-	
 	}
 	public static void nPrSwap(int d) {
 		if(d ==R) {
@@ -122,7 +121,6 @@ public class PCSpractice{
 			result[r] = N[i];
 			nCrRecursion(r+1,i+1);
 		}
-		
 	}
 	
 	public static void nCrDef(int n, int r) {

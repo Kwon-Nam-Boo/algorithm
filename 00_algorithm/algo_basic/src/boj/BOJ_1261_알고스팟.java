@@ -33,6 +33,7 @@ public class BOJ_1261_알고스팟 {
 		Deque<Pair> dq = new ArrayDeque<>();
 		dq.offer(new Pair(0,0,0));
 		visited[0][0] =true;
+		
 		while(!dq.isEmpty()) {
 			Pair tmp = dq.poll();
 			if(tmp.x == R-1 && tmp.y == C-1) {

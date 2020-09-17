@@ -18,7 +18,7 @@ public class BOJ_3967_매직스타 {
 	            {7,8,9,10},
 	            {4,6,9,11}
 	    };
-	private static int[][] = {{}}
+	//private static int[][] = {{}}
 	
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
@@ -48,7 +48,7 @@ public class BOJ_3967_매직스타 {
 		queue.offer(start);
 		
 		for (int i = 1; i <= 12; i++) {
-			if()
+			//if()
 		}
 		
 	}

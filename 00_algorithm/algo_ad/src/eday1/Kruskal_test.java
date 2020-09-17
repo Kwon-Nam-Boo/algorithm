@@ -37,6 +37,7 @@ public class Kruskal_test {
 			makeSet(i);
 		}
 		for (int i = 0; i < E; i++) {
+			
 			int pa = findSet(p[i].a);
 			int pb = findSet(p[i].b);
 			
@@ -64,6 +65,8 @@ public class Kruskal_test {
 			
 			return Integer.compare(this.w, o.w);
 		}
+		
+		
 		
 	}
 	

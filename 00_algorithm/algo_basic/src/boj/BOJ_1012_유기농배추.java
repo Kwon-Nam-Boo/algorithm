@@ -26,14 +26,14 @@ public class BOJ_1012_유기농배추 {
 		for (int i = 0; i < TC; i++) {
 			
 			st = new StringTokenizer(br.readLine());
-			C = Integer.parseInt(st.nextToken());
-			R = Integer.parseInt(st.nextToken());
+			
+			C = Integer.parseInt(st.nextToken());		// 세로 길이
+			R = Integer.parseInt(st.nextToken());		// 가로 길이
+			
 			map = new int[R][C];
 			visited = new boolean[R][C];
-			/*for (int j = 0; j < R; j++) {
-				System.out.println(Arrays.toString(map[j]));
-			}*/
-			V= Integer.parseInt(st.nextToken());
+			
+			V= Integer.parseInt(st.nextToken());		// 배추 개수
 			
 			
 			for (int j = 0; j < V; j++) {				// 배추 삽입	
@@ -43,9 +43,10 @@ public class BOJ_1012_유기농배추 {
 				map[b][a]=1;
 			}
 			
-			/*for (int j = 0; j < R; j++) {
+			for (int j = 0; j < R; j++) {
 				System.out.println(Arrays.toString(map[j]));
-			}*/
+			}
+			
 			count =0;
 			for (int r = 0; r < R; r++) {				
 				for (int c = 0; c < C; c++) {

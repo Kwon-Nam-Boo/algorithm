@@ -27,7 +27,9 @@ public class Dijkstra_PQ {
 		Scanner sc = new Scanner(System.in);
 		int V = sc.nextInt();
 		int E = sc.nextInt();
+		
 		List<Edge>[] adj = new ArrayList[V];
+		
 		for (int i = 0; i < adj.length; i++) {
 			adj[i] = new ArrayList<>();
 		}
