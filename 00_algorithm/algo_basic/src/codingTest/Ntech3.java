@@ -1,4 +1,4 @@
-package rhtn_homework;
+package codingTest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
