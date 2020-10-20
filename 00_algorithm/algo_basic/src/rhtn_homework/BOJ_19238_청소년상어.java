@@ -44,8 +44,6 @@ public class BOJ_19238_청소년상어 {
 		}
 		Collections.sort(list);
 		Pair shark = new Pair(-1, map[0][0].dir, 0, 0);
-		
-		//moveFish();
 		ans = 0;
 		dfs(map,shark, cnt);
 		System.out.println(ans);
@@ -62,36 +60,43 @@ public class BOJ_19238_청소년상어 {
 			}
 			// 물고기라면?
 			if(map[nr][nc].x !=0) {
+				// 넘겨줄 map 생성
 				Pair[][] next_map = new Pair[4][4];
 				for (int r = 0; r < 4; r++) {
 					for (int c = 0; c < 4; c++) {
 						next_map[r][c] = new Pair(map[r][c].x,map[r][c].dir,r,c);
 					}
 				}
+				// 상어 위치 이동 및 원래위치 0으로
 				int tmp = next_map[nr][nc].x;
 				next_map[shark.r][shark.c].x = 0;
 				next_map[nr][nc].x = -1;
+				// 물고기 리스트 최신화
 				initList(next_map);
 				dfs(next_map, new Pair(-1, next_map[nr][nc].dir, nr, nc),cnt + tmp);
+				// 물고기 리스트 최신화
 				initList(map);
 			}
 		}
 		
 	}
-
+	// 생선 이동
 	private static void moveFish(Pair map[][]) {
 		for (int i = 1; i < list.size(); i++) {
 			Pair p = list.get(i);
 			for (int j = 0; j < 8; j++) {
 				int nr = dir[(p.dir+j-1)%8][0] + p.r;
 				int nc = dir[(p.dir+j-1)%8][1] + p.c;
+				// 상어나, 벽일 경우 패스
 				if(!isIn(nr,nc) || map[nr][nc].x == -1) {
 					 continue;
 				}
 				else {
+					// 현재 방향 최신화
 					p.dir = (p.dir+j-1)%8 +1;
 					map[p.r][p.c].dir = p.dir;
 					
+					// swap x,dir
 					int px = map[p.r][p.c].x;
 					int pdir = map[p.r][p.c].dir;
 					int tx = map[nr][nc].x;
@@ -100,13 +105,14 @@ public class BOJ_19238_청소년상어 {
 					map[nr][nc].dir = pdir;
 					map[p.r][p.c].x = tx;
 					map[p.r][p.c].dir = tdir;
+					// 물고기 리스트 최신화
 					initList(map);
 					break;
 				}
 			}	
 		}
 	}
-
+	// 물고기 리스트 최신화
 	private static void initList(Pair map[][]) {
 		list.clear();
 		list.add(new Pair(-1,-1,-1,-1));
@@ -119,14 +125,7 @@ public class BOJ_19238_청소년상어 {
 		}
 		Collections.sort(list);
 	}
-
-	private static int find(int x) {
-		for (int i = 1; i < list.size(); i++) {
-			if(x == list.get(i).x) return i;
-		}
-		return 0;
-	}
-
+	
 	public static class Pair implements Comparable<Pair>{
 		int x,dir,r,c;
 
@@ -138,11 +137,7 @@ public class BOJ_19238_청소년상어 {
 			this.c = c;
 		}
 		
-		@Override
-		public String toString() {
-			return "Pair [x=" + x + ", dir=" + dir + ", r=" + r + ", c=" + c + "]";
-		}
-
+		// x가 작은순으로 정렬
 		@Override
 		public int compareTo(Pair o) {
 			Integer x1 = this.x;

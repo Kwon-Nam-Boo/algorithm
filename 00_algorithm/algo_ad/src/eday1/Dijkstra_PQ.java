@@ -55,7 +55,8 @@ public class Dijkstra_PQ {
 		while(!pq.isEmpty()) {
 			Edge edge = pq.poll();
 			
-			check[edge.v] = true;
+			//check[edge.v] = true;
+			if(D[edge.v].weight != edge.weight) continue;
 			
 			for (Edge next : adj[edge.v]) {
 				// check되지 않았으면서, D[next]가 D[edge.v] + next.weight보다 크다면 갱신
@@ -70,5 +71,17 @@ public class Dijkstra_PQ {
 		}
 		System.out.println(Arrays.toString(D));
 	}
-
+	//input
+//	7 11
+//	0 1 9
+//	0 2 5
+//	0 5 19
+//	2 3 1
+//	2 5 15
+//	3 0 2
+//	3 1 7
+//	3 5 17
+//	3 4 8
+//	4 6 4
+//	6 1 3
 }
