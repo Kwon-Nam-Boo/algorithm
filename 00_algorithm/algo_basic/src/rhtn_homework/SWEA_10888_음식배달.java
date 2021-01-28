@@ -3,7 +3,6 @@ package rhtn_homework;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.Inet4Address;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -12,7 +11,6 @@ public class SWEA_10888_음식배달 {
 
 	private static StringBuilder sb = new StringBuilder();
 	private static int N,ans, ans2;
-	//private static int[][] map;
 	private static List<Pair> house; 
 	private static List<Pair> chain; 
 
@@ -41,6 +39,7 @@ public class SWEA_10888_음식배달 {
 		}
 		System.out.println(sb);
 	}
+	
 	private static void find(List<Pair> list) {
 		ans = 0;
 		boolean[] visited = new boolean[chain.size()];
@@ -59,6 +58,7 @@ public class SWEA_10888_음식배달 {
 			ans+= list.get(i).cost;
 		}
 	}
+	
 	public static void subset() {
 		for (int i = 1; i < 1<< chain.size(); i++) {
 			List<Pair> list = new ArrayList<>();
