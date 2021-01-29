@@ -14,20 +14,20 @@ public class BOJ_1790_수이어쓰기2 {
 		int N = Integer.parseInt(st.nextToken());
 		int K = Integer.parseInt(st.nextToken());
 		
-		
 		long tmp = K;
 		long digit =1;
 		long lastNum = 0;
 		long reduceNum = 9;
 		
+		// 현 내용은 인터넷을 참고 , 머리쓰기 너무 싫다
 		while(tmp > (reduceNum*digit)) {
 			tmp -= (reduceNum*digit);
 			lastNum+=reduceNum;
 			digit++;
 			reduceNum*=10;
 		}
+		
 		long selNum = (lastNum+1) + ((tmp-1)/digit);
-		//System.out.println(selNum);
 		
 		if(selNum > N) {
 			System.out.println(-1);
