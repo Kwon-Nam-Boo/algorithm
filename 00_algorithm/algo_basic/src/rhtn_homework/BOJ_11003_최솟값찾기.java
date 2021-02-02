@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.Deque;
 import java.util.StringTokenizer;
 
@@ -31,7 +30,6 @@ public class BOJ_11003_최솟값찾기 {
 		
 
 		for (int i = 0; i < arr.length; i++) {
-			
 			arr[i] = Integer.parseInt(st.nextToken());
 			
 			// 만약 들어올 값보다 크다면 해당값을 버리는 걸 반복
