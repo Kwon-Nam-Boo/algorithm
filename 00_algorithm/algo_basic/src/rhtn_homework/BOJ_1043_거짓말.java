@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -13,9 +12,9 @@ import java.util.StringTokenizer;
 public class BOJ_1043_거짓말 {
 	
 	private static int N,M,T;
-	private static List<Integer> know;
-	private static boolean[] visit; 
-	private static int[][] party;
+	private static List<Integer> know;	// 진실을 아는 사람
+	private static boolean[] visit; 	// 파티에 대한 방문 처리
+	private static int[][] party;		// 파티 구성원
 
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -42,10 +41,8 @@ public class BOJ_1043_거짓말 {
 			}
 		}
 		visit = new boolean[M];
-		
 		bfs();
-
-		//System.out.println(know.contains(1));
+		
 	}
 
 	private static void bfs() {
@@ -70,13 +67,14 @@ public class BOJ_1043_거짓말 {
 								queue.offer(party[i][j2]);
 							}
 						}
+						// 그리고 해당 파티는 방문처리후, 이미 더이상 볼일이 없으니 break
 						visit[i] = true;
 						break;
 					}
 				}
-				//System.out.println(know);
 			}
 		}
+		// 방문이 없다 -> 거짓말해도되는 파티
 		int ans = 0;
 		for (int i = 0; i < party.length; i++) {
 			if(!visit[i]) ans++;
