@@ -35,6 +35,7 @@ public class Dijkstra_PQ {
 		}
 		for (int i = 0; i < E; i++) {
 			adj[sc.nextInt()].add(new Edge(sc.nextInt(), sc.nextInt()));
+			adj[sc.nextInt()].add(new Edge(sc.nextInt(), sc.nextInt()));
 		}
 		
 		//Dijkstra
