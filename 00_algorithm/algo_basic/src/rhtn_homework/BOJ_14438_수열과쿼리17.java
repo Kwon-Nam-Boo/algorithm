@@ -19,6 +19,7 @@ public class BOJ_14438_수열과쿼리17 {
 		
 		N = Integer.parseInt(br.readLine());
 		S = 1;
+		
 		while(S < N)
 			S <<=1;
 		tree = new int[2*S];
