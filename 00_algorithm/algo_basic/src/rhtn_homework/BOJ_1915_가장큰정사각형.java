@@ -37,9 +37,6 @@ public class BOJ_1915_가장큰정사각형 {
 				}
 			}
 		}
-//		for (int[] is : DP) {
-//			System.out.println(Arrays.toString(is));
-//		}
 		System.out.println(ans*ans);
 	}
 
