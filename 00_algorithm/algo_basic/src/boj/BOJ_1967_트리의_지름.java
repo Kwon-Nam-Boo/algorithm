@@ -20,15 +20,15 @@ public class BOJ_1967_트리의_지름 {
 		StringTokenizer st;
 		N = Integer.parseInt(br.readLine());
 		
+		// 1일 경우 예외 처리
 		if(N == 1) {
-			System.out.println();
+			System.out.println(0);
 		}else {
 			adlist = new ArrayList[N+1];
 			
 			for (int i = 1; i <= N; i++) {
 				adlist[i] = new ArrayList<>();
 			}
-			
 			for (int i = 0; i < N-1; i++) {
 				st = new StringTokenizer(br.readLine());
 				int a = Integer.parseInt(st.nextToken());

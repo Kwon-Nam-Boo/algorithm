@@ -15,7 +15,6 @@ public class 플로이드워샬 {
 			if(k == i) continue;
 			for (int j = 0; j < D.length; j++) {	// 도착정점
 				if(k == j || i == j) continue;
-				
 				if(D[i][k]!=M  && D[k][j]!=M  &&  D[i][j] > D[i][k] + D[k][j]) {
 					D[i][j] = D[i][k] + D[k][j];
 				}
