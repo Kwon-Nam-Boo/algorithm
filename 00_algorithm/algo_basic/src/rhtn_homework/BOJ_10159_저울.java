@@ -50,6 +50,8 @@ public class BOJ_10159_저울 {
 		for (int r = 0; r < map.length; r++) {
 			int cnt = 0;
 			for (int c = 0; c < map.length; c++) {
+				if(r == c) continue;
+				// r에서도 c를 못가고 c에서도 r을 못가는 경우
 				if(map[r][c]==max && map[c][r]==max) {
 					cnt++;
 				}
