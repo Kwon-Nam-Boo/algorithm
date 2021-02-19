@@ -32,7 +32,6 @@ public class BOJ_10830_행렬제곱 {
 		
 		long[][] ans = DQ(B);
 		
-		
 		for (int r = 0; r < N; r++) {
 			for (int c = 0; c < N; c++) {
 				sb.append(ans[r][c] + " ");
