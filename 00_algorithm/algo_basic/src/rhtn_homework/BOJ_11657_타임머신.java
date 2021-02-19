@@ -12,6 +12,7 @@ public class BOJ_11657_타임머신 {
 	
 	private static int N,M;
 	private static List<Edge>[] adList;
+	// 너무너무 중요한 long형  int의 max값에서 플러스가 되면 값이 변하기 때문
 	private static long[] dist;
 	private static StringBuilder sb = new StringBuilder();
 
