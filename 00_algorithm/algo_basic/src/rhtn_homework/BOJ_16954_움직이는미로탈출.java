@@ -33,6 +33,7 @@ public class BOJ_16954_움직이는미로탈출 {
 
 
 	private static int bfs() {
+		// 우선순위를 둔이유는 딱히 없을듯, 원래는 우상향일수록 빨리 체크하면 빠를까봐 ..
 		PriorityQueue<Pair> queue = new PriorityQueue<>();
 		queue.offer(new Pair(7,0));
 		
