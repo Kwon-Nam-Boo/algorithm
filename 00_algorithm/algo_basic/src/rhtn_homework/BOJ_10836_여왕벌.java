@@ -35,8 +35,8 @@ public class BOJ_10836_여왕벌 {
 		}
 		// 1.모서리 수정
 		changeEdge();
+		// 2. 내부수정(문제에서는 1->2를 반복해야하지만 , 사실 1만 진행하고 마지막만 2를 진행하면된다)
 		changeInside();
-		
 		for (int r = 0; r < M; r++) {
 			for (int c = 0; c < M; c++) {
 				sb.append(map[r][c] + " ");
