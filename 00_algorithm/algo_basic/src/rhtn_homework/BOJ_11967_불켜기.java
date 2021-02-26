@@ -40,18 +40,14 @@ public class BOJ_11967_불켜기 {
 		light = new boolean[N*N];
 		visited = new boolean[N*N];
 
-		
-//		for (int i = 0; i < adlist.length; i++) {
-//			System.out.println(adlist[i]);
-//		}
-		
 		System.out.println(bfs());
 	}
 
 	private static int bfs() {
 		int cnt = 1;
+		
 		Queue<Integer> queue = new LinkedList<>();
-		// 방문하지않은 불켜진방
+		// 방문하지않은 불켜진 방 확인
 		Queue<Integer> check = new LinkedList<>();
 		queue.offer(0);
 		light[0] = true;
@@ -60,7 +56,7 @@ public class BOJ_11967_불켜기 {
 		while(!queue.isEmpty()) {
 			int p = queue.poll();
 			
-			// 일단 불켜기 ..
+			// 일단 불켜고 check에 추가
 			for (int i = 0; i < adlist[p].size(); i++) {
 				int nextLight = adlist[p].get(i);
 				if(!light[nextLight]) {
@@ -69,26 +65,30 @@ public class BOJ_11967_불켜기 {
 					check.offer(nextLight);
 				}
 			}
+			
 			int len = check.size();
-		
+			// check를 확인하면서 방문하기 ..
 			for (int i = 0; i < len; i++) {
+				
 				int c = check.poll();
 				int cr = c/N;
 				int cc = c%N;
 				
 				boolean test = false;
-				// 방문하기 ..
+				// check에서 꺼내온 방이, 이동할수 있는 곳이라면 ..? 이동하자
 				for (int j = 0; j < dir.length; j++) {
+					// next라고 했지만, 사실상 근처에 암소가 있을수 있는가 없는가를 찾는것
 					int nr = cr + dir[j][0];
 					int nc = cc + dir[j][1];
 					int next = nr*N +nc;
-					
+					// 만약 현재까지의 위치에서 이동할수 있는 곳이라면 이동후 queue 삽입, 방문처리
 					if(isIn(nr,nc) && visited[next]) {
 						queue.offer(c);
 						visited[c] = true;
 						test =true;
 					}
 				}
+				// 주의: 만약에 방문한경우가 없으면 다시 check에 넣어준다(이후 불켜지는것에따라 갈수도 있으니깐)
 				if(!test) check.offer(c);
 			}
 	
