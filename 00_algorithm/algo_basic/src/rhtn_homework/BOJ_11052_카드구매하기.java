@@ -30,7 +30,7 @@ public class BOJ_11052_카드구매하기 {
 				DP[i] = Math.max(DP[i], DP[i-j] + pack[j]);
 			}
 		}
-		System.out.println(Arrays.toString(DP));
+		//System.out.println(Arrays.toString(DP));
 		System.out.println(DP[N]);
 	}
 
