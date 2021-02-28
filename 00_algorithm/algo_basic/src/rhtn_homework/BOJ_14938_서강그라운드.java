@@ -44,18 +44,21 @@ public class BOJ_14938_서강그라운드 {
 			adlist[a].add(new Edge(b,len));
 			adlist[b].add(new Edge(a,len));
 		}
+		
 		ans = 0;
+		// 시작점에 따라 확인하기 위해
 		for (int t = 0; t < N; t++) {
 			D = new Edge[N];
-			
+			// 초기화
 			for (int i = 0; i < N; i++) {
 				if(i == t) D[i] = new Edge(i, 0);
 				else D[i] = new Edge(i,Integer.MAX_VALUE);
 			}
+			
 			PriorityQueue<Edge> queue = new PriorityQueue<>();
 			queue.offer(D[t]);
+			// 해당 점 출발의 최대값 
 			int cnt = 0;
-			
 			visited = new boolean[N];
 			
 			while(!queue.isEmpty()) {
