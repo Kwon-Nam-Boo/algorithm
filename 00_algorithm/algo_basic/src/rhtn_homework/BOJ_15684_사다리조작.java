@@ -3,7 +3,6 @@ package rhtn_homework;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class BOJ_15684_사다리조작 {
@@ -30,7 +29,6 @@ public class BOJ_15684_사다리조작 {
 			int b = Integer.parseInt(st.nextToken())-1;
 			ladder[a][b] = 1;
 		}
-			
 		ans =-1;
 		end = false;
 		for (int i = 0; i <= 3; i++) {
