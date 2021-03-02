@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import javax.swing.plaf.synth.SynthScrollBarUI;
-
 public class BOJ_15711_환상의짝꿍 {
 
 	private static int T;
