@@ -24,11 +24,12 @@ public class BOJ_10816_숫자카드2 {
 			}else {
 				hm.put(c, 1);
 			}
-			
 		}
 		int M = Integer.parseInt(br.readLine());
 		st = new StringTokenizer(br.readLine());
+		
 		int ans =0;
+		
 		for (int i = 0; i <M; i++) {
 			int c = Integer.parseInt(st.nextToken());
 			if(hm.containsKey(c)) sb.append(hm.get(c) + " ");
