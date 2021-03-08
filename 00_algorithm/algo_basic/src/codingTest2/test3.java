@@ -5,7 +5,9 @@ public class test3 {
 }
 
 interface Moveable{
-	int move();
+	default int move() {
+		return 0;
+	};
 	int stop();
 }
 
