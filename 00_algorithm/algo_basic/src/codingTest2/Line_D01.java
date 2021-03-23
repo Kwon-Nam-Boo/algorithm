@@ -30,7 +30,6 @@ public class Line_D01 {
             } else if ("NUMBER".equals(type) && isMatchedPattern(NUMBER_PATTERN, argument)) {
                 return true;
             }
-
             return false;
         }
 

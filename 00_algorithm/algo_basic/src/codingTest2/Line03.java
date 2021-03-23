@@ -43,7 +43,6 @@ public class Line03 {
 					for (int k = i; k < j; k++) {
 						int next2 = enter[k];
 			
-					
 						if(s1 == next2 || map[next2][s1]) continue;
 						System.out.println(next2 + " " + s1);
 						map[next2][s1] = true;
