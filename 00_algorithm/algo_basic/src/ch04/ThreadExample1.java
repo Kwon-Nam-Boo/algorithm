@@ -17,9 +17,10 @@ class MyThread1 extends Thread{
 
 
 public class ThreadExample1 {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		MyThread1 thread = new MyThread1();
 		thread.start();
+		//thread.join();
 		System.out.println("Hello , My child!");
 	}
 }
