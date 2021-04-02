@@ -19,6 +19,7 @@ public class BOJ_17071_숨바꼭질5 {
 			System.out.println(0);
 			System.exit(0);
 		}
+		
 		Queue<Pair> queue = new LinkedList<>();
 		// 0 은 짝수  1은 홀수
 		queue.offer(new Pair(N,0));
