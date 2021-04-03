@@ -11,12 +11,10 @@ public class BOJ_1242_소풍 {
 		int K = sc.nextInt();	// 술래 간격(불변)
 		int M = sc.nextInt()-1;	// 동호의 번호
 		//System.out.println(test(N,K,M));
-		//System.out.println();
 		
 		int cnt = 0;
 	
 		while(N >= 1) {
-			//System.out.println(N +" " + K + " " + M);
 			int removed = (K-1)% N;
 			if(removed == M) {
 				cnt++;
