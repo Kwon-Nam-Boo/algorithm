@@ -23,9 +23,8 @@ public class BOJ_17103_골드바흐파티션 {
 				}
 			}
 		}
-	
-		//System.out.println(primes);
 		
+	
 		int T = Integer.parseInt(br.readLine());
 		for (int i = 0; i < T; i++) {
 			int n = Integer.parseInt(br.readLine());
