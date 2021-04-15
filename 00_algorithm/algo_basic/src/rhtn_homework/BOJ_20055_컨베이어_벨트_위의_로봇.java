@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -44,6 +45,9 @@ public class BOJ_20055_컨베이어_벨트_위의_로봇 {
 	}
 	// 내구도 0이 K개 이상인지 확인
 	private static boolean checkDurab() {
+		System.out.println(Arrays.toString(belt));
+		System.out.println(botList);
+		System.out.println();
 		int cnt = 0;
 		for (int i = 0; i < belt.length; i++) {
 			if(belt[i].cnt==0) cnt++;
