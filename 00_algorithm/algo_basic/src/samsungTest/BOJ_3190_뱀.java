@@ -27,8 +27,8 @@ public class BOJ_3190_뱀 {
 		
 		for (int i = 0; i < K ; i++) {
 			st = new StringTokenizer(br.readLine());
-			int r = Integer.parseInt(st.nextToken());
-			int c = Integer.parseInt(st.nextToken());
+			int r = Integer.parseInt(st.nextToken())-1;
+			int c = Integer.parseInt(st.nextToken())-1;
 			apple.add(new Pair(r,c));
 		}
 		// 뱀 변환 횟수
@@ -48,27 +48,6 @@ public class BOJ_3190_뱀 {
 		head = 1;
 		end = false;
 		
-		int ans = 0;
-		
-//		for (int i = 0; i < L; i++) {
-//			int t = time[i];
-//			String d = turn[i];
-//			for (int j = 1; j <= t; j++) {
-//				// 1. 머리 움직이기
-//				snakeHead();
-//				if(end) {
-//					ans+=j;
-//					break;
-//				}
-//				// 2.사과 체크하기
-//				checkApple();
-//				System.out.println(dq);
-//			}
-//			if(end) break;
-//			moveDir(d);
-//			ans+=t;
-//		}
-		
 		int cnt = 0;
 		int t = 0;
 		
@@ -78,15 +57,24 @@ public class BOJ_3190_뱀 {
 			if(end) break;
 			// 2.사과 체크하기
 			checkApple();
-			System.out.println(dq);
-			if(time[t] == cnt) moveDir(turn[t]);
+			//System.out.println(dq);
+//			for (int i = 0; i < N; i++) {
+//				System.out.println(Arrays.toString(visited[i]));
+//			}
+//			System.out.println();
+			if(t!= L && time[t] == cnt) {
+				moveDir(turn[t]);
+				t++;
+				
+			}
+			
 		}
 		System.out.println(cnt);
 	}
 	
 	private static void moveDir(String d) {
 		// 오른쪽으로 90도 회전이라면
-		if(d == "D") {
+		if(d .equals("D")) {
 			head = (head+1)%4;
 		}else {
 			head = (head+3)%4;
@@ -104,7 +92,8 @@ public class BOJ_3190_뱀 {
 				return;
 			}
 		}
-		dq.removeLast();
+		Pair tail = dq.pollLast();
+		visited[tail.r][tail.c] = false;
 		return;
 	}
 
