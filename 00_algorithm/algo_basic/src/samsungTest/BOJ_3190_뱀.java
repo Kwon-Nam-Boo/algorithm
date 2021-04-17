@@ -57,15 +57,9 @@ public class BOJ_3190_뱀 {
 			if(end) break;
 			// 2.사과 체크하기
 			checkApple();
-			//System.out.println(dq);
-//			for (int i = 0; i < N; i++) {
-//				System.out.println(Arrays.toString(visited[i]));
-//			}
-//			System.out.println();
 			if(t!= L && time[t] == cnt) {
 				moveDir(turn[t]);
 				t++;
-				
 			}
 			
 		}
